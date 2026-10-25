@@ -1,0 +1,27 @@
+*.exe
+*.msi
+*.dmg
+*.pkg
+**/tmp/capturedImages/
+**/temp/capturedImages/
+
+# Local configuration and signing credentials
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.p8
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.mobileprovision
+*.provisionprofile
+credentials*.json
+service-account*.json
+.DS_Store
+
+# Generated Pages output
+/_site/
