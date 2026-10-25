@@ -25,9 +25,9 @@ rtk proxy python3 -m http.server 4173 --bind 127.0.0.1
 
 ## 상단 시연 영상과 YouTube 연결
 
-현재 실제 시연 영상 녹화는 대기 중이며, 상단에는 ‘시연 영상 준비 중’을 표시합니다. 녹화용 에뮬레이터에 Android Pro 1.0.5 릴리즈 APK 설치를 완료했고 `DEBUGGABLE` 플래그가 없음을 확인했습니다. 컴퓨터 제어 도구의 에뮬레이터 터치 전달 실패로 ADB 화면 조작에 대한 사용자 확인을 요청한 상태입니다.
+홈페이지를 먼저 완성하고 실제 시연 영상 녹화는 추후 진행하기로 했습니다. 현재 상단에는 ‘시연 영상 준비 중’을 표시하며, 영상 파일은 아직 포함되어 있지 않습니다.
 
-녹화 완료 후 `assets/videos/ara-classic-title-announcement.mp4`와 포스터를 추가하고 `#demo-video`에 연결합니다. `.demo-pending`을 제거하고 영상의 `hidden` 및 재생 버튼의 `disabled`를 제거하면 기존 ‘소리와 함께 보기’ 동작을 사용할 수 있습니다. 영상은 자동으로 소리를 재생하지 않습니다.
+녹화 완료 후 `assets/videos/ara-classic-title-announcement.mp4`를 추가하고 `#demo-video`의 `src`로 연결합니다. 포스터가 있으면 `poster` 속성으로 연결합니다. `.demo-pending`을 제거하고 영상의 `hidden` 및 재생 버튼의 `disabled`를 제거한 뒤 버튼 문구를 ‘소리와 함께 보기’로 바꿉니다. 영상은 사용자가 재생 버튼을 누르면 소리와 함께 재생됩니다.
 
 나중에 YouTube에 업로드한 뒤에는 `index.html`에서 아래 속성에 **영상 URL만** 넣으면 됩니다.
 

@@ -73,7 +73,7 @@ demoPlay.addEventListener('click', async () => {
     await demoVideo.play();
     demoCaption.textContent = '재생 전과 감상 중에 들리는 곡 이름 안내를 확인해 보세요.';
   } catch {
-    demoCaption.textContent = '영상의 재생 버튼을 눌러 주세요. 재생되지 않으면 아래 링크로 영상을 열 수 있어요.';
+    demoCaption.textContent = '영상 안의 재생 버튼을 눌러 주세요. 재생되지 않으면 잠시 후 다시 시도해 주세요.';
   }
 });
 
