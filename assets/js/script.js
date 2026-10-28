@@ -4,6 +4,7 @@ const menuButton = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('#main-nav');
 
 function closeMenu() {
+  if (!navigation.classList.contains('is-open')) return;
   navigation.classList.remove('is-open');
   menuButton.setAttribute('aria-expanded', 'false');
   menuButton.setAttribute('aria-label', '메뉴 열기');
@@ -34,6 +35,7 @@ window.matchMedia('(max-width: 760px)').addEventListener('change', closeMenu);
 
 const answers = document.querySelectorAll('[data-answer]');
 const feedback = document.querySelector('#quiz-feedback');
+const initialFeedback = feedback.textContent;
 const resetButton = document.querySelector('.quiz-reset');
 
 answers.forEach((answer) => {
@@ -55,7 +57,7 @@ resetButton.addEventListener('click', () => {
     answer.disabled = false;
     answer.classList.remove('correct', 'incorrect');
   });
-  feedback.textContent = '정답이라고 생각하는 보기를 골라 보세요.';
+  feedback.textContent = initialFeedback;
   resetButton.hidden = true;
   answers[0].focus({ preventScroll: true });
 });
